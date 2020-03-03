@@ -1,5 +1,5 @@
 # docker-chinook
-Create and run MariaDB, Microsoft SQL Server, MySQL and PostgreSQL docker containers preloaded with the [Chinook Database] (https://github.com/lerocha/chinook-database) using docker-compose.
+Create and run MariaDB, Microsoft SQL Server, MySQL and PostgreSQL docker containers preloaded with the [Chinook Database](https://github.com/lerocha/chinook-database) using docker-compose.
 
 **Usage**:
 
@@ -24,7 +24,7 @@ Create and run MariaDB, Microsoft SQL Server, MySQL and PostgreSQL docker contai
 
 **Other**:
 
-- There is an SQLite Chinook Database located at .data/sqlite/chinook.db which can be access with the SQLite command line.
+- There is an SQLite Chinook Database located at .data/sqlite/chinook.sql which should the need arise.
 - [DBeaver](https://dbeaver.io/) is a great multi-database GUI available on all major platforms if feel the need to explore the database structures visually.
 
 **License**:
