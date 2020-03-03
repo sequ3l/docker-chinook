@@ -23,7 +23,9 @@ Create and run MariaDB, Microsoft SQL Server, MySQL and PostgreSQL docker contai
 - Microsoft SQL Server container does not persist data, it loads the Chinook Database every time it's run.
 
 **Other**:
-[DBeaver](https://dbeaver.io/) is a great multi-database GUI available on all major platforms if feel the need to explore the database structures visually.
+
+- [DBeaver](https://dbeaver.io/) is a great multi-database GUI available on all major platforms if feel the need to explore the database structures visually.
 
 **License**:
+
 MIT
