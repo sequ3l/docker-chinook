@@ -1,0 +1,70 @@
+version: "3.7"
+
+services:
+  mysql:
+    build: .data/mysql
+    image: chinook_mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: AbCd3FgH1JkLmN0pQrStUvWxYz#@!
+    ports:
+      - 3306:3306
+    volumes:
+      - chinook_mysql_volume:/var/lib/mysql
+    networks:
+      - chinook_network
+
+  mariadb:
+    build: .data/mariadb
+    image: chinook_mariadb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: AbCd3FgH1JkLmN0pQrStUvWxYz#@!
+    ports:
+      - 3307:3306
+    volumes:
+      - chinook_mariadb_volume:/var/lib/mysql
+    networks:
+      - chinook_network
+
+  postgres:
+    build: .data/postgres
+    image: chinook_postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: AbCd3FgH1JkLmN0pQrStUvWxYz#@!
+    ports:
+      - 5432:5432
+    volumes:
+      - chinook_postgres_volume:/var/lib/postgresql/data
+    networks:
+      - chinook_network
+
+  mssql:
+    build: .data/mssql
+    image: chinook_mssql
+    command: /bin/bash ./entrypoint.sh
+    restart: always
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: AbCd3FgH1JkLmN0pQrStUvWxYz#@!
+      MSSQL_PID: Express
+    ports:
+      - 1433:1433
+    volumes:
+      - .data/mssql/docker-entrypoint.sh:/entrypoint.sh
+      - .data/mssql/db-init.sh:/db-init.sh
+      - .data/mssql/chinook.sql:/chinook.sql
+
+    networks:
+      - chinook_network
+
+volumes:
+  chinook_mysql_volume:
+  chinook_mariadb_volume:
+  chinook_postgres_volume:
+
+networks:
+  chinook_network:
