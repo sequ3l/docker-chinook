@@ -24,6 +24,7 @@ Create and run MariaDB, Microsoft SQL Server, MySQL and PostgreSQL docker contai
 
 **Other**:
 
+- There is an SQLite Chinook Database located at .data/sqlite/chinook.db which can be access with the SQLite command line.
 - [DBeaver](https://dbeaver.io/) is a great multi-database GUI available on all major platforms if feel the need to explore the database structures visually.
 
 **License**:
