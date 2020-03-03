@@ -20,12 +20,12 @@ Create and run MariaDB, Microsoft SQL Server, MySQL and PostgreSQL docker contai
 - Omit the -d flag of docker-compose to view the build output directly in your console.
 - MariaDB and MySQL containers take a while to become available on first run, allow a few minutes before attempting to access these instances.
 - MariaDB runs on port 3307 as it conflicts with MySQL's default port 3306.
-- Microsoft SQL Server container does not persist data, it loads the Chinook Database every time it's run.
+- The Microsoft SQL Server container does not persist data, it loads the Chinook Database every time it's run.
 
 **Other**:
 
 - There is an SQLite Chinook Database located at .data/sqlite/chinook.db should the need arise.
-- [DBeaver](https://dbeaver.io/) is a great multi-database GUI available on all major platforms if you feel the need to explore the database structures visually.
+- [DBeaver](https://dbeaver.io/) is a great multi-database GUI available on all major platforms if you want to explore the database structures visually.
 
 **License**:
 
